@@ -1,3 +1,4 @@
+import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 import About from "@/modules/about";
 import Contact from "@/modules/contact";
@@ -18,6 +19,7 @@ export default function Home() {
       <Testimonial />
       <Faq />
       <Contact />
+      <Footer />
     </div>
   );
 }
