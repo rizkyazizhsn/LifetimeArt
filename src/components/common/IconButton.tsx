@@ -1,3 +1,5 @@
+"use client";
+
 import gsap from "gsap";
 import Image from "next/image";
 import SpotLight from "./SpotLight";
@@ -34,12 +36,12 @@ const IconButton = ({
   };
 
   return (
-    <SpotLight className="rounded-full">
+    <SpotLight className={["rounded-full", className].join(" ")}>
       <button
         onMouseEnter={handleMouseEnter}
         className={[
-          "relative inline-flex items-center gap-4 bg-white/10 backdrop-blur-md rounded-full px-4 py-3 font-medium text-base leading-5 text-white  cursor-pointer group",
-          className,
+          "relative inline-flex items-center gap-4 backdrop-blur-md rounded-full px-4 py-3 font-medium text-base leading-5  cursor-pointer group",
+          variant === "light" ? "text-white bg-white/10" : "text-[#101014] bg-[#E7E7E8]",
         ].join(" ")}
       >
         {children}

@@ -1,5 +1,6 @@
 import Navbar from "@/components/layout/Navbar";
 import About from "@/modules/about";
+import Faq from "@/modules/faqs";
 import Hero from "@/modules/hero";
 import Service from "@/modules/services";
 import Testimonial from "@/modules/testimonials";
@@ -14,6 +15,7 @@ export default function Home() {
       <Service />
       <Work />
       <Testimonial />
+      <Faq />
     </div>
   );
 }
