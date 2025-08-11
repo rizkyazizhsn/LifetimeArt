@@ -1,5 +1,6 @@
 import Navbar from "@/components/layout/Navbar";
 import About from "@/modules/about";
+import Contact from "@/modules/contact";
 import Faq from "@/modules/faqs";
 import Hero from "@/modules/hero";
 import Service from "@/modules/services";
@@ -16,6 +17,7 @@ export default function Home() {
       <Work />
       <Testimonial />
       <Faq />
+      <Contact />
     </div>
   );
 }
