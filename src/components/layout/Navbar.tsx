@@ -1,7 +1,7 @@
 "use client";
 
+import { MENU_LIST } from "@/constants/navbar-constant";
 import { useGsap } from "@/hooks/useGsap";
-import { MENU_LIST } from "@/lib/constants";
 import Image from "next/image";
 import { useRef } from "react";
 
@@ -31,14 +31,14 @@ const Navbar = () => {
       <nav className="flex items-center justify-between py-10">
         {/* Logo */}
         <h1 className="navbar-logo flex items-center text-white font-medium text-[23px] gap-0.5">
-          <Image src={"/assets/logo.svg"} width={32} height={32} alt="Logo" />
+          <Image src={"/assets/logo.svg"} width={32} height={32} alt="Logo" priority />
           LifetimeArt
         </h1>
         {/* Navigation */}
         <ul className="flex items-center gap-[30px]">
           {MENU_LIST.map(({ title, href }) => (
             <li key={href} className="nav-item p-2.5">
-              <a href={href} className="nav-link">
+              <a href={href} className="nav-link" role="menuItem" aria-label={`Navigate to ${title} section`}>
                 {title}
               </a>
             </li>
