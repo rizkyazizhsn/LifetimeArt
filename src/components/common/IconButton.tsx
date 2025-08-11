@@ -51,7 +51,7 @@ const IconButton = ({
           ].join(" ")}
         >
           <Image
-            src="/assets/icons/arrow.svg"
+            src="/assets/icons/ic-arrow.svg"
             width={24}
             height={24}
             alt="arrow"
