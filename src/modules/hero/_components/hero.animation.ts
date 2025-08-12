@@ -1,6 +1,6 @@
 import { gsap } from "@/lib/gsap.config";
 
-export const heroAnimations = (root: HTMLElement) => {
+export const heroAnimations = (root: HTMLElement): GSAPTimeline => {
   const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
 
   const q = gsap.utils.selector(root);

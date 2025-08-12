@@ -14,7 +14,7 @@ const Hero = () => {
   useEffect(() => {
     if (!heroRef.current) return;
     const ctx = gsap.context(() => {
-      heroAnimations(heroRef.current!);
+      heroAnimations(heroRef.current as HTMLDivElement);
     }, heroRef);
 
     return () => ctx.revert();
