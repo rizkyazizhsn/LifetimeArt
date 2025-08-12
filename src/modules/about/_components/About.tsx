@@ -6,7 +6,7 @@ import ImageCards from "./ImageCards";
 import { useGsap } from "@/hooks/useGsap";
 import Badge from "@/components/common/Badge";
 import { aboutAnimations } from "./about.animation";
-import { ABOUT_CONTENT } from "@/constants/about.constant";
+import { ABOUT_CONTENT } from "@/constants/about-constant";
 
 const About = () => {
   const aboutRef = useRef<HTMLDivElement>(null);
