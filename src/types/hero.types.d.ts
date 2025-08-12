@@ -1,4 +1,4 @@
-export interface HeroContent {
+export type HeroContent = {
   status: string;
   headline: string[];
   description: string;
