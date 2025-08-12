@@ -1,6 +1,8 @@
 import SpotLight from "@/components/common/SpotLight";
 
-const StatusPill = ({ title }: { title: string }) => {
+type StatusPillProps = { title: string };
+
+const StatusPill = ({ title }: StatusPillProps) => {
   return (
     <SpotLight className="rounded-full">
       <div className="status-pill flex items-center justify-center w-fit bg-[#28282C] px-3 py-2 rounded-full text-sm font-normal gap-1.5">

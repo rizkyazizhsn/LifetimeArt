@@ -26,13 +26,19 @@ export function useServiceAnimation() {
         duration: 0.3,
         ease: "power2.out",
       })
-      .from(".service-paragraph", {
+      .from(".service-description", {
         y: 15,
         opacity: 0,
         duration: 0.3,
         ease: "power2.out",
-      });
-  }, []);
+      })
+      .from(".service-image", {
+        y: 20,
+        opacity: 0,
+        duration: 0.3,
+        ease: "power2.out",
+      })
+  });
 
   return { serviceRef };
 }
