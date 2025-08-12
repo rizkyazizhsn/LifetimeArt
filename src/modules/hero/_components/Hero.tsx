@@ -6,7 +6,7 @@ import StatusPill from "./StatusPill";
 import { useEffect, useRef } from "react";
 import { heroAnimations } from "./hero.animation";
 import IconButton from "@/components/common/IconButton";
-import { HERO_CONTENT } from "@/constants/hero.constant";
+import { HERO_CONTENT } from "@/constants/hero-constant";
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
