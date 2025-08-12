@@ -24,7 +24,7 @@ const Navbar = () => {
       stagger: 0.1,
       delay: 0.3,
     })
-  }, [])
+  })
   
   return (
     <header ref={navbarRef} className="container fixed inset-x-0 z-30">

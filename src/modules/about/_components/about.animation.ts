@@ -1,6 +1,6 @@
 export const aboutAnimations = (
   root: HTMLElement,
-  gsap: GSAP
+  gsap: GSAP,
 ) => {
   const badge = root.querySelector('.about-badge');
   const titleLines = root.querySelectorAll('.about-title-line');
@@ -31,7 +31,6 @@ export const aboutAnimations = (
     x: 50,
   });
 
-  // Animate badge first
   tl.to(badge, {
     opacity: 1,
     y: 0,
@@ -39,16 +38,14 @@ export const aboutAnimations = (
     ease: "power3.out",
   })
 
-  // Animate title lines with stagger
   .to(titleLines, {
     opacity: 1,
     y: 0,
     duration: 0.8,
     ease: "power3.out",
     stagger: 0.15,
-  }, "-=0.4")
+  }, "-=0.3")
 
-  // Animate description from right
   .to(description, {
     opacity: 1,
     x: 0,

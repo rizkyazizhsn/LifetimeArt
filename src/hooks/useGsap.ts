@@ -31,7 +31,9 @@ export function useGsap<T extends HTMLElement>(
 
     return () => {
       ctx.revert();
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      ScrollTrigger.getAll()
+        .filter((t) => t.trigger === ref.current)
+        .forEach((trigger) => trigger.kill());
     };
   }, [ref, ...deps]);
 }
