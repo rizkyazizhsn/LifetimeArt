@@ -34,12 +34,11 @@ const IconButton = ({
   };
 
   return (
-    <SpotLight className="rounded-full">
+    <SpotLight className={["rounded-full", className].join(" ")}>
       <button
         onMouseEnter={handleMouseEnter}
         className={[
-          "relative inline-flex items-center gap-4 bg-white/10 backdrop-blur-md rounded-full px-4 py-3 font-medium text-base leading-5 text-white  cursor-pointer group",
-          className,
+          "relative inline-flex items-center gap-4 bg-white/10 backdrop-blur-md rounded-full px-4 py-3 font-medium text-base leading-5 text-white  cursor-pointer group"
         ].join(" ")}
       >
         {children}

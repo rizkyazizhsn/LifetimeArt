@@ -6,6 +6,7 @@ import StatusPill from "./StatusPill";
 import { useEffect, useRef } from "react";
 import { heroAnimations } from "./hero.animation";
 import IconButton from "@/components/common/IconButton";
+import { HERO_CONTENT } from "@/constants/hero.constant";
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -25,18 +26,22 @@ const Hero = () => {
         <div className="space-y-6">
           <StatusPill title="Available for work" />
 
-          <h1 className="headline text-[56px] font-medium leading-[120%]">
-            <span className="headline-line">Your trusted partner</span>
-            <br />
-            <span className="headline-line">for quality home improvement</span>
+          <h1 className="hero-headline text-[56px] font-medium leading-[120%]">
+            {HERO_CONTENT.headline.map((line, index) => (
+              <span key={index} className="hero-headline-line">
+                {line}
+                <br />
+              </span>
+            ))}
           </h1>
 
-          <p className="paragraph text-xl text-[#D0D1DB] leading-[170%] -tracking-[0.3px] w-3/4">
-            LifetimeArt delivers expert home improvements, creating beautiful
-            and functional spaces with quality craftsmanship.
+          <p className="hero-paragraph text-xl text-[#D0D1DB] leading-[170%] -tracking-[0.3px] w-3/4 mt-6">
+            {HERO_CONTENT.description}
           </p>
 
-          <IconButton className="cta-btn">Work with us</IconButton>
+          <IconButton className="hero-cta-btn mt-14">
+            {HERO_CONTENT.cta}
+          </IconButton>
         </div>
 
         {/* Right Content */}
@@ -44,10 +49,10 @@ const Hero = () => {
           {/* Overlay */}
           <div className="absolute z-10 top-0 bg-linear-to-b from-[#101014] to-[#10101400] w-full opacity-80 h-[167px]" />
           <Image
-            src={"/assets/hero.jpg"}
-            width={652}
-            height={835}
-            alt="hero"
+            src={HERO_CONTENT.image.src}
+            width={HERO_CONTENT.image.width}
+            height={HERO_CONTENT.image.height}
+            alt={HERO_CONTENT.image.alt}
             className="hero-image size-full object-cover"
             priority
           />
