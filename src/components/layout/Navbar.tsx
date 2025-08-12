@@ -2,8 +2,8 @@
 
 import { MENU_LIST } from "@/constants/navbar-constant";
 import { useGsap } from "@/hooks/useGsap";
-import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import Logo from "./Logo";
 
 const Navbar = () => {
   const navbarRef = useRef<HTMLElement>(null);
@@ -52,16 +52,7 @@ const Navbar = () => {
         ].join(" ")}
       >
         {/* Logo */}
-        <h1 className="navbar-logo flex items-center text-white font-medium text-[23px] gap-0.5">
-          <Image
-            src={"/assets/logo.svg"}
-            width={32}
-            height={32}
-            alt="Logo"
-            priority
-          />
-          LifetimeArt
-        </h1>
+        <Logo className="navbar-logo" />
         {/* Navigation */}
         <ul className="flex items-center gap-[30px]">
           {MENU_LIST.map(({ title, href }) => (

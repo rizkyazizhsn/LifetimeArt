@@ -1,13 +1,16 @@
+"use client";
+
 import gsap from "gsap";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 type AccordionProps = {
-  icon: string;
+  icon?: string;
   title: string;
   isOpen: boolean;
   onToggle: (isOpen: boolean) => void;
   children: React.ReactNode;
+  className?: string;
 };
 
 const Accordion = ({
@@ -16,6 +19,7 @@ const Accordion = ({
   isOpen,
   onToggle,
   children,
+  className,
 }: AccordionProps) => {
   const contentRef = useRef<HTMLDivElement>(null);
   const iconRef = useRef<HTMLDivElement>(null);
@@ -38,15 +42,17 @@ const Accordion = ({
   }, [isOpen]);
 
   return (
-    <div className="border-b border-[#DBDAD9]">
+    <div className={["border-b border-[#DBDAD9]", className].join(" ")}>
       <button
         onClick={() => onToggle(!isOpen)}
         className="flex items-center justify-between w-full text-left py-5 cursor-pointer"
       >
         <div className="flex items-center gap-5">
-          <div className="text-xl">
-            <Image src={icon} width={40} height={40} alt={title} />
-          </div>
+          {icon && (
+            <div className="text-xl">
+              <Image src={icon} width={40} height={40} alt={title} />
+            </div>
+          )}
           <span className="text-xl font-medium text-[#101014] leading-[120%]">{title}</span>
         </div>
         <div ref={iconRef}>
