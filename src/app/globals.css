@@ -64,6 +64,30 @@
       max-width: var(--container-2xl);
     }
   }
+
+  /* Image Cards Animation Styles */
+  .image-cards-animated {
+    position: relative;
+    will-change: clip-path;
+    overflow: hidden;
+  }
+
+  .image-cards-track {
+    will-change: transform;
+  }
+
+  .image-card {
+    will-change: transform;
+  }
+
+  .image-card img {
+    will-change: transform;
+  }
+
+  /* Fade-in animation from left to right */
+  .fade-in-active {
+    animation: fadeInLeftToRight 300ms ease-out forwards;
+  }
 }
 
 body {
@@ -104,4 +128,3 @@ body {
     animation: arrowSlideDiagonal 0.6s ease forwards;
   }
 }
-
